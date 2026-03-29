@@ -153,7 +153,8 @@
     #depoimentos .section-label { color: var(--green); }
     #depoimentos .section-label::before { background: var(--green); }
     .depoimentos-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
-    .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .depoimentos-grid { display: flex; justify-content: center; max-width: 1200px; margin: 0 auto; }
+    .depoimentos-grid .depo-card { max-width: 480px; width: 100%; }
     .depo-card { background: white; border-radius: var(--radius); padding: 2rem; border: 1px solid rgba(0,0,0,0.08); transition: transform var(--transition), box-shadow var(--transition); }
     .depo-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
     .depo-stars { color: #f5a623; font-size: 0.9rem; margin-bottom: 1rem; }
@@ -234,7 +235,7 @@
 <body>
 
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">Lucas Rubio Barrueco</a>
+  <a href="#hero" class="nav-logo">Lucas Rubio Barrueco.</a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
@@ -382,9 +383,9 @@
             </div>
           </div>
         </div>
-        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+        <div class="projeto-overlay"><a href="https://lucasr820.github.io/mastersports/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
       </div>
-      <div class="projeto-info"><div class="projeto-tag">Site Institucional</div><h3>Clínica Saúde Total</h3><p>Site completo com agendamento online e apresentação dos especialistas.</p></div>
+      <div class="projeto-info"><div class="projeto-tag">Site Institucional</div><h3>Academia</h3><p>Site com planos, horários de aula, localização, avaliações e horários disponíveis.</p></div>
     </div>
     <div class="projeto-card reveal reveal-delay-1">
       <div class="projeto-img">
@@ -398,9 +399,9 @@
             </div>
           </div>
         </div>
-        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+        <div class="projeto-overlay"><a href="https://www.cabanadopark.com.br/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
       </div>
-      <div class="projeto-info"><div class="projeto-tag">Negócio Local</div><h3>Pizzaria Dom Gennaro</h3><p>Cardápio digital, galeria de fotos e pedido direto via WhatsApp.</p></div>
+      <div class="projeto-info"><div class="projeto-tag">Site institucional</div><h3>Cabana do Park</h3><p>Site para negócio local com calendário de datas, galeria e contato direto via WhatsApp.</p></div>
     </div>
     <div class="projeto-card reveal reveal-delay-2">
       <div class="projeto-img">
@@ -415,9 +416,9 @@
             </div>
           </div>
         </div>
-        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+        <div class="projeto-overlay"><a href="https://lucasr820.github.io/artemtudo/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
       </div>
-      <div class="projeto-info"><div class="projeto-tag">Landing Page</div><h3>Consultório Dr. Mendes</h3><p>Landing page para captação de pacientes com formulário e depoimentos.</p></div>
+      <div class="projeto-info"><div class="projeto-tag">Site institucional</div><h3>Art em Tudo</h3><p>Página com catálogo de produtos, depoimentos, localização e opções de contato.</p></div>
     </div>
     <div class="projeto-card reveal">
       <div class="projeto-img">
@@ -430,26 +431,9 @@
             </div>
           </div>
         </div>
-        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+        <div class="projeto-overlay"><a href="https://lucasr820.github.io/xxxxxxx/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
       </div>
-      <div class="projeto-info"><div class="projeto-tag">Vitrine Online</div><h3>Ateliê Criativo da Lu</h3><p>Vitrine online para artesanato com galeria e contato via WhatsApp.</p></div>
-    </div>
-    <div class="projeto-card reveal reveal-delay-1">
-      <div class="projeto-img">
-        <div class="projeto-mockup" style="background:#001a0a">
-          <div class="mockup-browser">
-            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
-            <div class="mockup-content" style="background:#002010">
-              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#1a4a2e,rgba(200,245,90,0.5))"></div>
-              <div class="mockup-row" style="width:75%;background:#00301a"></div>
-              <div class="mockup-row" style="width:90%;background:#00301a"></div>
-              <div style="margin-top:10px;height:50px;background:rgba(200,245,90,0.1);border-radius:4px;border:1px solid rgba(200,245,90,0.2)"></div>
-            </div>
-          </div>
-        </div>
-        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
-      </div>
-      <div class="projeto-info"><div class="projeto-tag">Site Institucional</div><h3>Academia FitZone</h3><p>Site com planos, horários de aula e formulário de matrícula online.</p></div>
+      <div class="projeto-info"><div class="projeto-tag">Landing Page</div><h3>Linktree</h3><p>Página de links personalizada com redes sociais, portfólio e contato centralizado.</p></div>
     </div>
     <div class="projeto-card reveal reveal-delay-2">
       <div class="projeto-img">
@@ -462,9 +446,9 @@
             </div>
           </div>
         </div>
-        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+        <div class="projeto-overlay"><a href="https://lucasr820.github.io/xxxxxxx/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
       </div>
-      <div class="projeto-info"><div class="projeto-tag">Landing Page</div><h3>Imobiliária Horizonte</h3><p>Página para captação de interessados em imóveis com busca e formulário.</p></div>
+      <div class="projeto-info"><div class="projeto-tag">Dashboard</div><h3>Acompanhamento de Desempenho</h3><p>Painel com gráficos, métricas para gestão de de finanças pessoais.</p></div>
     </div>
   </div>
 </section>
@@ -495,17 +479,7 @@
     <div class="depo-card reveal">
       <div class="depo-stars">★★★★★</div>
       <p class="depo-text">"Ficou muito melhor do que eu esperava! Meu site ficou profissional de verdade, e já recebi elogios de clientes. O atendimento foi excelente, super atencioso em tudo."</p>
-      <div class="depo-author"><div class="depo-avatar">CM</div><div><div class="depo-name">Carlos Mendonça</div><div class="depo-role">Proprietário — Clínica Saúde Total</div></div></div>
-    </div>
-    <div class="depo-card reveal reveal-delay-1">
-      <div class="depo-stars">★★★★★</div>
-      <p class="depo-text">"Precisava de um site rápido para minha pizzaria e foi entregue antes do prazo! Meus clientes adoraram o cardápio online. Recomendo demais para quem precisa!"</p>
-      <div class="depo-author"><div class="depo-avatar">LF</div><div><div class="depo-name">Luisa Ferreira</div><div class="depo-role">Empreendedora — Pizzaria Dom Gennaro</div></div></div>
-    </div>
-    <div class="depo-card reveal reveal-delay-2">
-      <div class="depo-stars">★★★★★</div>
-      <p class="depo-text">"Minha academia ganhou um site incrível! Aumentamos o número de alunos em menos de dois meses. Vale muito o investimento, principalmente pelo custo-benefício."</p>
-      <div class="depo-author"><div class="depo-avatar">RA</div><div><div class="depo-name">Rafael Andrade</div><div class="depo-role">Sócio — Academia FitZone</div></div></div>
+      <div class="depo-author"><div class="depo-avatar">WS</div><div><div class="depo-name">Willian e Stefany</div><div class="depo-role">Proprietários — Cabana do Park</div></div></div>
     </div>
   </div>
 </section>
@@ -521,7 +495,7 @@
         <i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Falar pelo WhatsApp
       </a>
       <div style="margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem">
-        <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-envelope"></i></div><span>contato@devweb.com.br</span></div>
+        <div class="contato-info-item"><a href="mailto:contato.lucasrubiobarrueco@gmail.com" style="display:flex;align-items:center;gap:1rem;color:inherit;text-decoration:none"><div class="info-icon"><i class="fa-solid fa-envelope"></i></div><span>contato.lucasrubiobarrueco@gmail.com</span></a></div>
         <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-clock"></i></div><span>Respondo em até 2 horas</span></div>
         <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-map-pin"></i></div><span>Atendo em todo o Brasil</span></div>
       </div>
@@ -530,7 +504,7 @@
       <div class="contato-box">
         <h3 style="font-size:1.2rem;margin-bottom:0.5rem">Solicite seu orçamento</h3>
         <p style="color:var(--gray);font-size:0.9rem;margin-bottom:2rem">Gratuito e sem compromisso!</p>
-        <form class="contato-form" id="contactForm" novalidate>
+        <form class="contato-form" id="contactForm" action="https://formspree.io/f/xdapeawe" method="POST" novalidate>
           <div class="form-group">
             <label for="nome">Seu nome</label>
             <input type="text" id="nome" name="nome" placeholder="João Silva" required />
@@ -538,6 +512,10 @@
           <div class="form-group">
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" placeholder="joao@exemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
           </div>
           <div class="form-group">
             <label for="tipo">Tipo de projeto</label>
@@ -557,7 +535,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Lucas Rubio Barrueco</div>
+  <div class="footer-logo">Lucas Rubio Barrueco.</div>
   <p>© 2026 Dev Web. Feito com muito café.</p>
   <div class="footer-links">
     <a href="#hero">Início</a>
@@ -593,11 +571,22 @@
     const btn = this.querySelector('.form-submit');
     btn.disabled = true;
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
-    setTimeout(() => {
-      document.getElementById('formSuccess').style.display = 'flex';
-      btn.style.display = 'none';
-      this.reset();
-    }, 1200);
+    const data = new FormData(this);
+    fetch('https://formspree.io/f/xdapeawe', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+      .then(res => {
+        if (res.ok) {
+          document.getElementById('formSuccess').style.display = 'flex';
+          btn.style.display = 'none';
+          this.reset();
+        } else {
+          btn.disabled = false;
+          btn.innerHTML = 'Enviar mensagem <i class="fa-solid fa-paper-plane"></i>';
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'Enviar mensagem <i class="fa-solid fa-paper-plane"></i>';
+      });
   });
 
   // Smooth scroll for anchor links
