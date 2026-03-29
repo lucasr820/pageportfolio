@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Web | Sites Profissionais que Geram Resultados</title>
+  <meta name="description" content="Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios. Sites modernos, rápidos e que convertem visitantes em clientes." />
+  <meta name="keywords" content="desenvolvedor web freelancer, criação de sites, sites para pequenos negócios, landing page, site profissional" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a;
+      --white: #f5f4f0;
+      --cream: #ede9e0;
+      --green: #1a4a2e;
+      --green-mid: #2d7a4f;
+      --green-light: #4caf7d;
+      --accent: #c8f55a;
+      --gray: #888;
+      --font-display: 'DM Serif Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 16px;
+      --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 4rem;
+      transition: background var(--transition), backdrop-filter var(--transition);
+    }
+    nav.scrolled { background: rgba(10,10,10,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color var(--transition); position: relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--accent); transition:width var(--transition); }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--accent) !important; color: var(--black) !important; padding: 0.55rem 1.4rem; border-radius: 50px; font-weight: 600 !important; font-size: 0.85rem !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,245,90,0.35) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .hamburger span { width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+
+    /* HERO */
+    #hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 8rem 4rem 4rem; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(29,74,46,0.4) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 10% 80%, rgba(200,245,90,0.07) 0%, transparent 60%); }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%); }
+    .hero-content { position: relative; max-width: 780px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(200,245,90,0.1); border: 1px solid rgba(200,245,90,0.3); color: var(--accent); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2rem; animation: fadeUp 0.8s ease both; }
+    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+    .hero-title { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: 1.05; letter-spacing: -0.02em; animation: fadeUp 0.8s 0.1s ease both; }
+    .hero-title em { font-style: italic; color: var(--green-light); }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--gray); margin: 1.8rem 0 3rem; max-width: 540px; font-weight: 300; animation: fadeUp 0.8s 0.2s ease both; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.3s ease both; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--accent); color: var(--black); padding: 1rem 2.2rem; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(200,245,90,0.4); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: var(--white); padding: 1rem 2.2rem; border-radius: 50px; font-weight: 500; font-size: 1rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: border-color var(--transition), background var(--transition); }
+    .btn-secondary:hover { border-color: var(--accent); background: rgba(200,245,90,0.05); }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 5rem; animation: fadeUp 0.8s 0.4s ease both; }
+    .stat-item { border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem; }
+    .stat-num { font-family: var(--font-display); font-size: 2.2rem; color: var(--accent); }
+    .stat-label { font-size: 0.8rem; color: var(--gray); letter-spacing: 0.05em; text-transform: uppercase; }
+    .hero-scroll { position: absolute; bottom: 2.5rem; right: 4rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--gray); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; animation: fadeUp 1s 0.6s ease both; }
+    .hero-scroll::after { content:''; width:1px; height:60px; background: linear-gradient(to bottom, var(--gray), transparent); animation: scrollLine 2s infinite; }
+    @keyframes scrollLine { 0%,100%{opacity:1}50%{opacity:0.3} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)} }
+
+    /* SECTIONS */
+    section { padding: 7rem 4rem; }
+    .section-label { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
+    .section-label::before { content:''; width:30px; height:1px; background:var(--accent); }
+    .section-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; letter-spacing: -0.02em; }
+    .section-title em { font-style: italic; color: var(--green-light); }
+
+    /* SOBRE */
+    #sobre { background: var(--cream); color: var(--black); }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+    #sobre .section-label { color: var(--green); }
+    #sobre .section-label::before { background: var(--green); }
+    .sobre-img-frame { width: 100%; aspect-ratio: 4/5; background: var(--green); border-radius: 24px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+    .sobre-img-frame .dev-icon { font-size: 8rem; color: rgba(255,255,255,0.1); position: absolute; }
+    .code-lines { position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; gap: 0.8rem; justify-content: center; }
+    .code-line { height: 2px; background: rgba(255,255,255,0.1); border-radius: 2px; }
+    .code-line:nth-child(odd) { width: 75%; }
+    .code-line:nth-child(3n) { width: 55%; background: rgba(200,245,90,0.3); }
+    .sobre-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--accent); color: var(--black); padding: 1.2rem 1.5rem; border-radius: 16px; text-align: center; font-weight: 600; }
+    .sobre-badge .big { font-size: 1.8rem; font-family: var(--font-display); display: block; }
+    .sobre-image { position: relative; }
+    .sobre-text p { color: #444; font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.8; }
+    .sobre-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+    .pill { background: var(--green); color: var(--white); padding: 0.45rem 1.1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; }
+
+    /* SERVIÇOS */
+    #servicos { background: var(--black); }
+    .servicos-header { max-width: 1200px; margin: 0 auto 4rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
+    .servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.06); border-radius: var(--radius); overflow: hidden; }
+    .servico-card { background: var(--black); padding: 2.5rem; position: relative; overflow: hidden; transition: background var(--transition); }
+    .servico-card::before { content:''; position:absolute; inset:0; background: linear-gradient(135deg, rgba(45,122,79,0.15) 0%, transparent 60%); opacity:0; transition: opacity var(--transition); }
+    .servico-card:hover { background: #0f1a13; }
+    .servico-card:hover::before { opacity: 1; }
+    .servico-icon { width: 52px; height: 52px; background: rgba(200,245,90,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--accent); margin-bottom: 1.5rem; transition: background var(--transition), transform var(--transition); }
+    .servico-card:hover .servico-icon { background: rgba(200,245,90,0.2); transform: scale(1.1); }
+    .servico-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; }
+    .servico-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
+    .servico-num { position: absolute; top: 2rem; right: 2rem; font-family: var(--font-display); font-size: 3.5rem; color: rgba(255,255,255,0.04); line-height: 1; }
+
+    /* PORTFOLIO */
+    #portfolio { background: linear-gradient(180deg, var(--black) 0%, #060d08 100%); }
+    .portfolio-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .projeto-card { background: #111; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
+    .projeto-card:hover { transform: translateY(-8px); border-color: rgba(200,245,90,0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,245,90,0.1); }
+    .projeto-img { width: 100%; aspect-ratio: 16/10; overflow: hidden; position: relative; }
+    .projeto-mockup { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .mockup-browser { width: 85%; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .mockup-bar { height: 28px; background: #222; display: flex; align-items: center; padding: 0 10px; gap: 6px; }
+    .mockup-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .mockup-content { height: 140px; padding: 12px; }
+    .mockup-hero-bar { height: 40px; border-radius: 4px; margin-bottom: 8px; }
+    .mockup-row { height: 8px; border-radius: 4px; margin-bottom: 6px; }
+    .projeto-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); }
+    .projeto-card:hover .projeto-overlay { opacity: 1; }
+    .overlay-btn { background: var(--accent); color: var(--black); padding: 0.6rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .projeto-info { padding: 1.5rem; }
+    .projeto-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .projeto-info h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .projeto-info p { font-size: 0.85rem; color: var(--gray); }
+
+    /* DIFERENCIAIS */
+    #diferenciais { background: var(--green); }
+    .diferenciais-inner { max-width: 1200px; margin: 0 auto; }
+    #diferenciais .section-label { color: var(--accent); }
+    #diferenciais .section-label::before { background: var(--accent); }
+    .diferenciais-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: var(--radius); overflow: hidden; margin-top: 4rem; }
+    .diferencial-item { background: var(--green); padding: 3rem; transition: background var(--transition); }
+    .diferencial-item:hover { background: #1f5535; }
+    .diferencial-icon { font-size: 2rem; margin-bottom: 1.2rem; }
+    .diferencial-item h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.8rem; }
+    .diferencial-item p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; }
+
+    /* DEPOIMENTOS */
+    #depoimentos { background: var(--cream); color: var(--black); }
+    #depoimentos .section-label { color: var(--green); }
+    #depoimentos .section-label::before { background: var(--green); }
+    .depoimentos-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
+    .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .depo-card { background: white; border-radius: var(--radius); padding: 2rem; border: 1px solid rgba(0,0,0,0.08); transition: transform var(--transition), box-shadow var(--transition); }
+    .depo-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+    .depo-stars { color: #f5a623; font-size: 0.9rem; margin-bottom: 1rem; }
+    .depo-text { font-size: 0.95rem; color: #444; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+    .depo-author { display: flex; align-items: center; gap: 1rem; }
+    .depo-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1rem; }
+    .depo-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
+    .depo-role { font-size: 0.8rem; color: var(--gray); }
+
+    /* CONTATO */
+    #contato { background: var(--black); }
+    .contato-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .contato-left p { color: var(--gray); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2.5rem; margin-top: 1.5rem; }
+    .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.8rem; background: #25d366; color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
+    .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(37,211,102,0.35); }
+    .contato-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-group label { font-size: 0.85rem; font-weight: 500; color: var(--gray); }
+    .form-group input, .form-group textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 1rem 1.2rem; border-radius: 12px; font-family: var(--font-body); font-size: 0.95rem; transition: border-color var(--transition), background var(--transition); outline: none; resize: vertical; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); background: rgba(200,245,90,0.04); }
+    .form-group textarea { min-height: 120px; }
+    .form-submit { background: var(--accent); color: var(--black); border: none; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; font-family: var(--font-body); transition: transform var(--transition), box-shadow var(--transition); display: flex; align-items: center; gap: 0.6rem; align-self: flex-start; }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200,245,90,0.35); }
+    .form-success { display: none; background: rgba(76,175,125,0.1); border: 1px solid rgba(76,175,125,0.3); color: var(--green-light); padding: 1rem 1.5rem; border-radius: 12px; font-size: 0.95rem; align-items: center; gap: 0.8rem; }
+    .contato-box { background: #111; border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 2.5rem; }
+    .contato-info-item { display: flex; align-items: center; gap: 1rem; color: var(--gray); margin-top: 1rem; }
+    .info-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+
+    /* FOOTER */
+    footer { background: #050505; border-top: 1px solid rgba(255,255,255,0.05); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); }
+    .footer-logo span { color: var(--accent); }
+    footer p { color: var(--gray); font-size: 0.85rem; }
+    .footer-links { display: flex; gap: 2rem; }
+    .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: color var(--transition); }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* MOBILE MENU */
+    .mobile-menu { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.97); backdrop-filter: blur(20px); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-display); font-size: 2rem; color: var(--white); text-decoration: none; transition: color var(--transition); }
+    .mobile-menu a:hover { color: var(--accent); }
+    .close-menu { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+      .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .sobre-image { max-width: 400px; }
+      .contato-inner { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 5rem 1.5rem; }
+      #hero { padding: 7rem 1.5rem 4rem; }
+      .hero-stats { gap: 1.5rem; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .diferenciais-grid { grid-template-columns: 1fr; }
+      .hero-scroll { display: none; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+      .servicos-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Lucas Rubio Barrueco</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato" class="nav-cta">Solicitar Orçamento</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu" aria-label="Fechar menu">✕</button>
+  <a href="#sobre" class="mobile-link">Sobre</a>
+  <a href="#servicos" class="mobile-link">Serviços</a>
+  <a href="#portfolio" class="mobile-link">Portfólio</a>
+  <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+  <a href="#contato" class="mobile-link">Contato</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Disponível para novos projetos</div>
+    <h1 class="hero-title">Crio sites profissionais<br>que <em>geram resultados</em></h1>
+    <p class="hero-sub">Transformo a identidade do seu negócio em um site moderno, rápido e que converte visitantes em clientes — com atendimento próximo e preço justo.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+em+criar+um+site." target="_blank" rel="noopener" class="btn-primary">
+        <i class="fa-brands fa-whatsapp"></i> Solicitar orçamento
+      </a>
+      <a href="#portfolio" class="btn-secondary">Ver projetos <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Projetos entregues</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Satisfação garantida</div></div>
+      <div class="stat-item"><div class="stat-num">7d</div><div class="stat-label">Prazo médio</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="sobre-image reveal">
+      <div class="sobre-img-frame">
+        <i class="fa-solid fa-code dev-icon"></i>
+        <div class="code-lines">
+          <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
+          <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
+          <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
+          <div class="code-line"></div><div class="code-line"></div>
+        </div>
+      </div>
+      <div class="sobre-badge"><span class="big">2+</span>anos criando sites</div>
+    </div>
+    <div class="sobre-text reveal reveal-delay-1">
+      <div class="section-label" style="color:var(--green);">Sobre mim</div>
+      <h2 class="section-title" style="color:var(--black)">Desenvolvedor web <em style="color:var(--green)">focado em resultados</em></h2>
+      <br>
+      <p>Sou um desenvolvedor web apaixonado por transformar ideias em sites que realmente funcionam. Meu foco é criar soluções digitais personalizadas para pequenos negócios, autônomos e empreendedores locais.</p>
+      <p>Diferente de grandes agências, ofereço atendimento próximo, comunicação clara e total dedicação ao seu projeto. Cada site é desenvolvido do zero, pensando na identidade do seu negócio e nos seus objetivos.</p>
+      <p>Acredito que todo negócio merece uma presença digital de qualidade — e isso não precisa custar uma fortuna.</p>
+      <div class="sobre-pills">
+        <span class="pill">HTML & CSS</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">WordPress</span>
+        <span class="pill">SEO Básico</span>
+        <span class="pill">Design Responsivo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="servicos-header reveal">
+    <div>
+      <div class="section-label">Serviços</div>
+      <h2 class="section-title">O que posso<br><em>fazer por você</em></h2>
+    </div>
+    <a href="#contato" class="btn-primary">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+  <div class="servicos-grid">
+    <div class="servico-card reveal">
+      <div class="servico-num">01</div>
+      <div class="servico-icon"><i class="fa-solid fa-building"></i></div>
+      <h3>Site Institucional</h3>
+      <p>Site completo para apresentar sua empresa, serviços e conquistar a confiança dos seus clientes online.</p>
+    </div>
+    <div class="servico-card reveal reveal-delay-1">
+      <div class="servico-num">02</div>
+      <div class="servico-icon"><i class="fa-solid fa-rocket"></i></div>
+      <h3>Landing Page</h3>
+      <p>Página focada em conversão para captar leads, vender produtos ou divulgar um serviço específico.</p>
+    </div>
+    <div class="servico-card reveal reveal-delay-2">
+      <div class="servico-num">03</div>
+      <div class="servico-icon"><i class="fa-solid fa-store"></i></div>
+      <h3>Sites para Negócios Locais</h3>
+      <p>Restaurantes, clínicas, salões, lojas — presença digital profissional para atrair clientes da sua região.</p>
+    </div>
+    <div class="servico-card reveal">
+      <div class="servico-num">04</div>
+      <div class="servico-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <h3>Otimização SEO</h3>
+      <p>Configuração de SEO básico para que seu site apareça no Google e seja encontrado pelos seus clientes.</p>
+    </div>
+    <div class="servico-card reveal reveal-delay-1">
+      <div class="servico-num">05</div>
+      <div class="servico-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+      <h3>Design Responsivo</h3>
+      <p>Todos os sites são desenvolvidos mobile-first — perfeitos em celulares, tablets e computadores.</p>
+    </div>
+    <div class="servico-card reveal reveal-delay-2">
+      <div class="servico-num">06</div>
+      <div class="servico-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+      <h3>Redesign de Sites</h3>
+      <p>Modernize seu site antigo com um visual renovado, mais rápido e alinhado com as tendências atuais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="portfolio">
+  <div class="portfolio-header reveal">
+    <div class="section-label">Portfólio</div>
+    <h2 class="section-title">Projetos <em>recentes</em></h2>
+    <p style="color:var(--gray);margin-top:1rem;max-width:500px;margin-inline:auto">Uma seleção dos trabalhos que desenvolvi — cada projeto com foco nas necessidades específicas do cliente.</p>
+  </div>
+  <div class="portfolio-grid">
+    <div class="projeto-card reveal">
+      <div class="projeto-img">
+        <div class="projeto-mockup" style="background:#0d1117">
+          <div class="mockup-browser">
+            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
+            <div class="mockup-content" style="background:#0f1923">
+              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#1a4a2e,#2d7a4f)"></div>
+              <div class="mockup-row" style="width:80%;background:#1e2d3d"></div>
+              <div class="mockup-row" style="width:60%;background:#1e2d3d"></div>
+              <div style="display:flex;gap:8px;margin-top:12px"><div style="flex:1;height:50px;background:#1e2d3d;border-radius:4px"></div><div style="flex:1;height:50px;background:#1e2d3d;border-radius:4px"></div><div style="flex:1;height:50px;background:#1e2d3d;border-radius:4px"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+      </div>
+      <div class="projeto-info"><div class="projeto-tag">Site Institucional</div><h3>Clínica Saúde Total</h3><p>Site completo com agendamento online e apresentação dos especialistas.</p></div>
+    </div>
+    <div class="projeto-card reveal reveal-delay-1">
+      <div class="projeto-img">
+        <div class="projeto-mockup" style="background:#1a0a00">
+          <div class="mockup-browser">
+            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
+            <div class="mockup-content" style="background:#2d1600">
+              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#8b4513,#d2691e)"></div>
+              <div class="mockup-row" style="width:70%;background:#3d2000"></div>
+              <div style="display:flex;gap:8px;margin-top:12px"><div style="flex:1;height:50px;background:#3d2000;border-radius:4px"></div><div style="flex:1;height:50px;background:#3d2000;border-radius:4px"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+      </div>
+      <div class="projeto-info"><div class="projeto-tag">Negócio Local</div><h3>Pizzaria Dom Gennaro</h3><p>Cardápio digital, galeria de fotos e pedido direto via WhatsApp.</p></div>
+    </div>
+    <div class="projeto-card reveal reveal-delay-2">
+      <div class="projeto-img">
+        <div class="projeto-mockup" style="background:#000814">
+          <div class="mockup-browser">
+            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
+            <div class="mockup-content" style="background:#00060f">
+              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#003566,#0077b6)"></div>
+              <div class="mockup-row" style="width:85%;background:#001d3d"></div>
+              <div class="mockup-row" style="width:55%;background:#001d3d"></div>
+              <div style="margin-top:12px;height:50px;background:#001d3d;border-radius:4px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+      </div>
+      <div class="projeto-info"><div class="projeto-tag">Landing Page</div><h3>Consultório Dr. Mendes</h3><p>Landing page para captação de pacientes com formulário e depoimentos.</p></div>
+    </div>
+    <div class="projeto-card reveal">
+      <div class="projeto-img">
+        <div class="projeto-mockup" style="background:#0a0010">
+          <div class="mockup-browser">
+            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
+            <div class="mockup-content" style="background:#150020">
+              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#6a0dad,#9b59b6)"></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="height:45px;background:#1e0030;border-radius:4px"></div><div style="height:45px;background:#1e0030;border-radius:4px"></div><div style="height:45px;background:#1e0030;border-radius:4px"></div><div style="height:45px;background:#1e0030;border-radius:4px"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+      </div>
+      <div class="projeto-info"><div class="projeto-tag">Vitrine Online</div><h3>Ateliê Criativo da Lu</h3><p>Vitrine online para artesanato com galeria e contato via WhatsApp.</p></div>
+    </div>
+    <div class="projeto-card reveal reveal-delay-1">
+      <div class="projeto-img">
+        <div class="projeto-mockup" style="background:#001a0a">
+          <div class="mockup-browser">
+            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
+            <div class="mockup-content" style="background:#002010">
+              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#1a4a2e,rgba(200,245,90,0.5))"></div>
+              <div class="mockup-row" style="width:75%;background:#00301a"></div>
+              <div class="mockup-row" style="width:90%;background:#00301a"></div>
+              <div style="margin-top:10px;height:50px;background:rgba(200,245,90,0.1);border-radius:4px;border:1px solid rgba(200,245,90,0.2)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+      </div>
+      <div class="projeto-info"><div class="projeto-tag">Site Institucional</div><h3>Academia FitZone</h3><p>Site com planos, horários de aula e formulário de matrícula online.</p></div>
+    </div>
+    <div class="projeto-card reveal reveal-delay-2">
+      <div class="projeto-img">
+        <div class="projeto-mockup" style="background:#1a0a0a">
+          <div class="mockup-browser">
+            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
+            <div class="mockup-content" style="background:#200d0d">
+              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#8b0000,#c0392b)"></div>
+              <div style="display:flex;gap:8px;margin-top:10px"><div style="width:40%;height:80px;background:#2d1010;border-radius:4px"></div><div style="flex:1"><div class="mockup-row" style="width:100%;background:#2d1010;margin-bottom:8px"></div><div class="mockup-row" style="width:70%;background:#2d1010;margin-bottom:8px"></div><div style="height:22px;width:50%;background:#8b0000;border-radius:20px"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="projeto-overlay"><a href="#contato" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
+      </div>
+      <div class="projeto-info"><div class="projeto-tag">Landing Page</div><h3>Imobiliária Horizonte</h3><p>Página para captação de interessados em imóveis com busca e formulário.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="diferenciais-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label">Por que me escolher</div>
+      <h2 class="section-title">Meus <em>diferenciais</em></h2>
+    </div>
+    <div class="diferenciais-grid">
+      <div class="diferencial-item reveal"><div class="diferencial-icon">🤝</div><h3>Atendimento Personalizado</h3><p>Você fala diretamente comigo. Sem intermediários, sem ruídos. Entendo a fundo o seu negócio para criar algo que realmente represente você.</p></div>
+      <div class="diferencial-item reveal reveal-delay-1"><div class="diferencial-icon">⚡</div><h3>Sites Rápidos e Modernos</h3><p>Código limpo e otimizado. Seus clientes não esperam — sites lentos perdem vendas. Entrego performance de verdade.</p></div>
+      <div class="diferencial-item reveal reveal-delay-2"><div class="diferencial-icon">🎯</div><h3>Foco em Conversão</h3><p>Cada elemento do site é pensado para transformar visitantes em clientes. CTAs estratégicos, design que guia e copy eficiente.</p></div>
+      <div class="diferencial-item reveal reveal-delay-3"><div class="diferencial-icon">💰</div><h3>Preço Acessível</h3><p>Site profissional não precisa custar caro. Ofereço qualidade de agência com o custo de um freelancer dedicado ao seu sucesso.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="depoimentos-header reveal">
+    <div class="section-label" style="color:var(--green)">Depoimentos</div>
+    <h2 class="section-title" style="color:var(--black)">O que dizem os <em style="color:var(--green)">clientes</em></h2>
+  </div>
+  <div class="depoimentos-grid">
+    <div class="depo-card reveal">
+      <div class="depo-stars">★★★★★</div>
+      <p class="depo-text">"Ficou muito melhor do que eu esperava! Meu site ficou profissional de verdade, e já recebi elogios de clientes. O atendimento foi excelente, super atencioso em tudo."</p>
+      <div class="depo-author"><div class="depo-avatar">CM</div><div><div class="depo-name">Carlos Mendonça</div><div class="depo-role">Proprietário — Clínica Saúde Total</div></div></div>
+    </div>
+    <div class="depo-card reveal reveal-delay-1">
+      <div class="depo-stars">★★★★★</div>
+      <p class="depo-text">"Precisava de um site rápido para minha pizzaria e foi entregue antes do prazo! Meus clientes adoraram o cardápio online. Recomendo demais para quem precisa!"</p>
+      <div class="depo-author"><div class="depo-avatar">LF</div><div><div class="depo-name">Luisa Ferreira</div><div class="depo-role">Empreendedora — Pizzaria Dom Gennaro</div></div></div>
+    </div>
+    <div class="depo-card reveal reveal-delay-2">
+      <div class="depo-stars">★★★★★</div>
+      <p class="depo-text">"Minha academia ganhou um site incrível! Aumentamos o número de alunos em menos de dois meses. Vale muito o investimento, principalmente pelo custo-benefício."</p>
+      <div class="depo-author"><div class="depo-avatar">RA</div><div><div class="depo-name">Rafael Andrade</div><div class="depo-role">Sócio — Academia FitZone</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="contato-inner">
+    <div class="contato-left reveal">
+      <div class="section-label">Contato</div>
+      <h2 class="section-title">Vamos tirar seu projeto <em>do papel?</em></h2>
+      <p>Pronto para dar o próximo passo? Me manda uma mensagem — vou responder rápido e a gente conversa sobre o que você precisa, sem compromisso.</p>
+      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+em+criar+um+site+para+meu+neg%C3%B3cio." target="_blank" rel="noopener" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i> Falar pelo WhatsApp
+      </a>
+      <div style="margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem">
+        <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-envelope"></i></div><span>contato@devweb.com.br</span></div>
+        <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-clock"></i></div><span>Respondo em até 2 horas</span></div>
+        <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-map-pin"></i></div><span>Atendo em todo o Brasil</span></div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="contato-box">
+        <h3 style="font-size:1.2rem;margin-bottom:0.5rem">Solicite seu orçamento</h3>
+        <p style="color:var(--gray);font-size:0.9rem;margin-bottom:2rem">Gratuito e sem compromisso!</p>
+        <form class="contato-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" placeholder="João Silva" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="joao@exemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de projeto</label>
+            <input type="text" id="tipo" name="tipo" placeholder="Ex: site para minha clínica" />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Me conte um pouco sobre seu negócio e o que você precisa..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Enviar mensagem <i class="fa-solid fa-paper-plane"></i></button>
+          <div class="form-success" id="formSuccess"><i class="fa-solid fa-circle-check"></i> Mensagem enviada! Retorno em breve. 🎉</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Lucas Rubio Barrueco</div>
+  <p>© 2026 Dev Web. Feito com ❤️ e muito café.</p>
+  <div class="footer-links">
+    <a href="#hero">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#contato">Contato</a>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+  // Hamburger / mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Form submission
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!document.getElementById('nome').value.trim() || !document.getElementById('email').value.trim()) return;
+    const btn = this.querySelector('.form-submit');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+    setTimeout(() => {
+      document.getElementById('formSuccess').style.display = 'flex';
+      btn.style.display = 'none';
+      this.reset();
+    }, 1200);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
