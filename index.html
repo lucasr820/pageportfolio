@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev Web | Sites Profissionais que Geram Resultados</title>
+  <title>RB | Sites Profissionais que Geram Resultados</title>
   <meta name="description" content="Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios. Sites modernos, rápidos e que convertem visitantes em clientes." />
   <meta name="keywords" content="desenvolvedor web freelancer, criação de sites, sites para pequenos negócios, landing page, site profissional" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -117,7 +117,8 @@
     /* PORTFOLIO */
     #portfolio { background: linear-gradient(180deg, var(--black) 0%, #060d08 100%); }
     .portfolio-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; justify-items: center; }
+    .portfolio-grid .projeto-card:only-child { max-width: 400px; width: 100%; }
     .projeto-card { background: #111; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
     .projeto-card:hover { transform: translateY(-8px); border-color: rgba(200,245,90,0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,245,90,0.1); }
     .projeto-img { width: 100%; aspect-ratio: 16/10; overflow: hidden; position: relative; }
@@ -235,7 +236,7 @@
 <body>
 
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">Lucas Rubio Barrueco.</a>
+  <a href="#hero" class="nav-logo">WEBSOLUTIONS|RB.</a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
@@ -372,23 +373,6 @@
   <div class="portfolio-grid">
     <div class="projeto-card reveal">
       <div class="projeto-img">
-        <div class="projeto-mockup" style="background:#0d1117">
-          <div class="mockup-browser">
-            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
-            <div class="mockup-content" style="background:#0f1923">
-              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#1a4a2e,#2d7a4f)"></div>
-              <div class="mockup-row" style="width:80%;background:#1e2d3d"></div>
-              <div class="mockup-row" style="width:60%;background:#1e2d3d"></div>
-              <div style="display:flex;gap:8px;margin-top:12px"><div style="flex:1;height:50px;background:#1e2d3d;border-radius:4px"></div><div style="flex:1;height:50px;background:#1e2d3d;border-radius:4px"></div><div style="flex:1;height:50px;background:#1e2d3d;border-radius:4px"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="projeto-overlay"><a href="https://lucasr820.github.io/mastersports/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
-      </div>
-      <div class="projeto-info"><div class="projeto-tag">Site Institucional</div><h3>Academia</h3><p>Site com planos, horários de aula, localização, avaliações e horários disponíveis.</p></div>
-    </div>
-    <div class="projeto-card reveal reveal-delay-1">
-      <div class="projeto-img">
         <div class="projeto-mockup" style="background:#1a0a00">
           <div class="mockup-browser">
             <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
@@ -402,53 +386,6 @@
         <div class="projeto-overlay"><a href="https://www.cabanadopark.com.br/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
       </div>
       <div class="projeto-info"><div class="projeto-tag">Site institucional</div><h3>Cabana do Park</h3><p>Site para negócio local com calendário de datas, galeria e contato direto via WhatsApp.</p></div>
-    </div>
-    <div class="projeto-card reveal reveal-delay-2">
-      <div class="projeto-img">
-        <div class="projeto-mockup" style="background:#000814">
-          <div class="mockup-browser">
-            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
-            <div class="mockup-content" style="background:#00060f">
-              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#003566,#0077b6)"></div>
-              <div class="mockup-row" style="width:85%;background:#001d3d"></div>
-              <div class="mockup-row" style="width:55%;background:#001d3d"></div>
-              <div style="margin-top:12px;height:50px;background:#001d3d;border-radius:4px"></div>
-            </div>
-          </div>
-        </div>
-        <div class="projeto-overlay"><a href="https://lucasr820.github.io/artemtudo/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
-      </div>
-      <div class="projeto-info"><div class="projeto-tag">Site institucional</div><h3>Art em Tudo</h3><p>Página com catálogo de produtos, depoimentos, localização e opções de contato.</p></div>
-    </div>
-    <div class="projeto-card reveal">
-      <div class="projeto-img">
-        <div class="projeto-mockup" style="background:#0a0010">
-          <div class="mockup-browser">
-            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
-            <div class="mockup-content" style="background:#150020">
-              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#6a0dad,#9b59b6)"></div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="height:45px;background:#1e0030;border-radius:4px"></div><div style="height:45px;background:#1e0030;border-radius:4px"></div><div style="height:45px;background:#1e0030;border-radius:4px"></div><div style="height:45px;background:#1e0030;border-radius:4px"></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="projeto-overlay"><a href="https://lucasr820.github.io/xxxxxxx/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
-      </div>
-      <div class="projeto-info"><div class="projeto-tag">Landing Page</div><h3>Linktree</h3><p>Página de links personalizada com redes sociais, portfólio e contato centralizado.</p></div>
-    </div>
-    <div class="projeto-card reveal reveal-delay-2">
-      <div class="projeto-img">
-        <div class="projeto-mockup" style="background:#1a0a0a">
-          <div class="mockup-browser">
-            <div class="mockup-bar"><div class="mockup-dot" style="background:#ff5f57"></div><div class="mockup-dot" style="background:#febc2e"></div><div class="mockup-dot" style="background:#28c840"></div></div>
-            <div class="mockup-content" style="background:#200d0d">
-              <div class="mockup-hero-bar" style="background:linear-gradient(90deg,#8b0000,#c0392b)"></div>
-              <div style="display:flex;gap:8px;margin-top:10px"><div style="width:40%;height:80px;background:#2d1010;border-radius:4px"></div><div style="flex:1"><div class="mockup-row" style="width:100%;background:#2d1010;margin-bottom:8px"></div><div class="mockup-row" style="width:70%;background:#2d1010;margin-bottom:8px"></div><div style="height:22px;width:50%;background:#8b0000;border-radius:20px"></div></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="projeto-overlay"><a href="https://lucasr820.github.io/xxxxxxx/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye"></i> Ver projeto</a></div>
-      </div>
-      <div class="projeto-info"><div class="projeto-tag">Dashboard</div><h3>Acompanhamento de Desempenho</h3><p>Painel com gráficos, métricas para gestão de de finanças pessoais.</p></div>
     </div>
   </div>
 </section>
@@ -535,7 +472,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Lucas Rubio Barrueco.</div>
+  <div class="footer-logo">WEBSOLUTIONS|RB.</div>
   <p>© 2026 Dev Web. Feito com muito café.</p>
   <div class="footer-links">
     <a href="#hero">Início</a>
