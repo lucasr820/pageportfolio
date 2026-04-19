@@ -8,264 +8,84 @@
   <meta name="keywords" content="desenvolvedor web freelancer, criação de sites, sites para pequenos negócios, landing page, site profissional" />
 
   <!-- SEO -->
-  <link rel="canonical" href="https://SEU-DOMINIO.com.br" />
   <link rel="icon" type="image/svg+xml" href="assets/images/iconeweb.svg" />
   <!-- Open Graph -->
   <meta property="og:title" content="RB | Sites Profissionais que Geram Resultados" />
   <meta property="og:description" content="Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios. Sites modernos, rápidos e que convertem visitantes em clientes." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://SEU-DOMINIO.com.br" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RB | Sites Profissionais que Geram Resultados" />
   <meta name="twitter:description" content="Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios." />
+  <meta name="twitter:image" content="assets/images/og-image.jpg" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "RB Web Solutions",
+    "description": "Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios.",
+    "image": "assets/images/og-image.jpg",
+    "priceRange": "R$ 700 - R$ 2.500",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Brasil"
+    },
+    "serviceType": ["Criação de sites", "Landing pages", "Sites institucionais", "Otimização SEO"],
+    "founder": {
+      "@type": "Person",
+      "name": "Lucas Rubio Barrueco"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-67-98161-2929",
+      "contactType": "customer service",
+      "availableLanguage": ["Portuguese"],
+      "email": "contato.lucasrubiobarrueco@gmail.com"
+    },
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto tempo leva para ficar pronto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Landing pages ficam prontas em até 5 dias úteis. Sites institucionais em até 10 dias. Projetos personalizados são combinados conforme a complexidade." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem cuida do domínio e da hospedagem?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Eu cuido de tudo. Registro o domínio no seu nome e configuro a hospedagem no primeiro ano por minha conta." }
+      },
+      {
+        "@type": "Question",
+        "name": "Tem suporte depois da entrega?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todos os planos incluem suporte gratuito de 30 a 60 dias para ajustes, dúvidas e correções." }
+      },
+      {
+        "@type": "Question",
+        "name": "Meu site vai aparecer no Google?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Configuro SEO básico em todos os projetos: meta tags, Open Graph, sitemap e Google Analytics." }
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black: #0a0a0a;
-      --white: #f5f4f0;
-      --cream: #ede9e0;
-      --green: #1a4a2e;
-      --green-mid: #2d7a4f;
-      --green-light: #4caf7d;
-      --accent: #c8f55a;
-      --gray: #888;
-      --font-display: 'DM Serif Display', serif;
-      --font-body: 'DM Sans', sans-serif;
-      --radius: 16px;
-      --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-body); background: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.6; }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 4rem;
-      transition: background var(--transition), backdrop-filter var(--transition);
-    }
-    nav.scrolled { background: rgba(10,10,10,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .nav-logo { font-family: var(--font-display); font-size: 1.5rem; color: var(--white); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color var(--transition); position: relative; }
-    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--accent); transition:width var(--transition); }
-    .nav-links a:hover { color: var(--white); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-cta { background: var(--accent) !important; color: var(--black) !important; padding: 0.55rem 1.4rem; border-radius: 50px; font-weight: 600 !important; font-size: 0.85rem !important; }
-    .nav-cta::after { display: none !important; }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,245,90,0.35) !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
-    .hamburger span { width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
-
-    /* HERO */
-    #hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 8rem 4rem 4rem; }
-    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(29,74,46,0.4) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 10% 80%, rgba(200,245,90,0.07) 0%, transparent 60%); }
-    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%); }
-    .hero-content { position: relative; max-width: 780px; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(200,245,90,0.1); border: 1px solid rgba(200,245,90,0.3); color: var(--accent); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2rem; animation: fadeUp 0.8s ease both; }
-    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
-    .hero-title { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6rem); line-height: 1.05; letter-spacing: -0.02em; animation: fadeUp 0.8s 0.1s ease both; }
-    .hero-title em { font-style: italic; color: var(--green-light); }
-    .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--gray); margin: 1.8rem 0 3rem; max-width: 540px; font-weight: 300; animation: fadeUp 0.8s 0.2s ease both; }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.3s ease both; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--accent); color: var(--black); padding: 1rem 2.2rem; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(200,245,90,0.4); }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; color: var(--white); padding: 1rem 2.2rem; border-radius: 50px; font-weight: 500; font-size: 1rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: border-color var(--transition), background var(--transition); }
-    .btn-secondary:hover { border-color: var(--accent); background: rgba(200,245,90,0.05); }
-    .hero-stats { display: flex; gap: 3rem; margin-top: 5rem; animation: fadeUp 0.8s 0.4s ease both; }
-    .stat-item { border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1.5rem; }
-    .stat-num { font-family: var(--font-display); font-size: 2.2rem; color: var(--accent); }
-    .stat-label { font-size: 0.8rem; color: var(--gray); letter-spacing: 0.05em; text-transform: uppercase; }
-    .hero-scroll { position: absolute; bottom: 2.5rem; right: 4rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--gray); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; animation: fadeUp 1s 0.6s ease both; }
-    .hero-scroll::after { content:''; width:1px; height:60px; background: linear-gradient(to bottom, var(--gray), transparent); animation: scrollLine 2s infinite; }
-    @keyframes scrollLine { 0%,100%{opacity:1}50%{opacity:0.3} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)} }
-
-    /* SECTIONS */
-    section { padding: 7rem 4rem; }
-    .section-label { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
-    .section-label::before { content:''; width:30px; height:1px; background:var(--accent); }
-    .section-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; letter-spacing: -0.02em; }
-    .section-title em { font-style: italic; color: var(--green-light); }
-
-    /* SOBRE */
-    #sobre { background: var(--cream); color: var(--black); }
-    .sobre-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: center; max-width: 1200px; margin: 0 auto; }
-    #sobre .section-label { color: var(--green); }
-    #sobre .section-label::before { background: var(--green); }
-    #sobre .section-title { color: var(--black); margin-bottom: 1.5rem; }
-    #sobre .section-title em { color: var(--green); }
-    .sobre-img-frame { width: 100%; aspect-ratio: 4/5; background: var(--green); border-radius: 24px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
-    .sobre-img-frame .dev-icon { font-size: 8rem; color: rgba(255,255,255,0.1); position: absolute; }
-    .code-lines { position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; gap: 0.8rem; justify-content: center; }
-    .code-line { height: 2px; background: rgba(255,255,255,0.1); border-radius: 2px; }
-    .code-line:nth-child(odd) { width: 75%; }
-    .code-line:nth-child(3n) { width: 55%; background: rgba(200,245,90,0.3); }
-    .sobre-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--accent); color: var(--black); padding: 1.2rem 1.5rem; border-radius: 16px; text-align: center; font-weight: 600; }
-    .sobre-badge .big { font-size: 1.8rem; font-family: var(--font-display); display: block; }
-    .sobre-image { position: relative; }
-    .sobre-text p { color: #444; font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.8; }
-    .sobre-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
-    .pill { background: var(--green); color: var(--white); padding: 0.45rem 1.1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; }
-
-    /* SERVIÇOS */
-    #servicos { background: var(--black); }
-    .servicos-header { max-width: 1200px; margin: 0 auto 4rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
-    .servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.06); border-radius: var(--radius); overflow: hidden; }
-    .servico-card { background: var(--black); padding: 2.5rem; position: relative; overflow: hidden; transition: background var(--transition); }
-    .servico-card::before { content:''; position:absolute; inset:0; background: linear-gradient(135deg, rgba(45,122,79,0.15) 0%, transparent 60%); opacity:0; transition: opacity var(--transition); }
-    .servico-card:hover { background: #0f1a13; }
-    .servico-card:hover::before { opacity: 1; }
-    .servico-icon { width: 52px; height: 52px; background: rgba(200,245,90,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: var(--accent); margin-bottom: 1.5rem; transition: background var(--transition), transform var(--transition); }
-    .servico-card:hover .servico-icon { background: rgba(200,245,90,0.2); transform: scale(1.1); }
-    .servico-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.8rem; }
-    .servico-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
-    .servico-num { position: absolute; top: 2rem; right: 2rem; font-family: var(--font-display); font-size: 3.5rem; color: rgba(255,255,255,0.04); line-height: 1; }
-
-    /* PORTFOLIO */
-    #portfolio { background: linear-gradient(180deg, var(--black) 0%, #060d08 100%); }
-    .portfolio-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
-    .portfolio-header p { color: var(--gray); margin-top: 1rem; max-width: 500px; margin-inline: auto; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; justify-items: center; }
-    .portfolio-grid .projeto-card:only-child { max-width: 400px; width: 100%; }
-    .projeto-card { background: #111; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition); }
-    .projeto-card:hover { transform: translateY(-8px); border-color: rgba(200,245,90,0.3); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,245,90,0.1); }
-    .projeto-img { width: 100%; aspect-ratio: 16/10; overflow: hidden; position: relative; }
-    .projeto-mockup { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .mockup-browser { width: 85%; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-    .mockup-bar { height: 28px; background: #222; display: flex; align-items: center; padding: 0 10px; gap: 6px; }
-    .mockup-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .mockup-dot:nth-child(1) { background: #ff5f57; }
-    .mockup-dot:nth-child(2) { background: #febc2e; }
-    .mockup-dot:nth-child(3) { background: #28c840; }
-    .mockup-content { height: 140px; padding: 12px; }
-    .mockup-hero-bar { height: 40px; border-radius: 4px; margin-bottom: 8px; }
-    .mockup-row { height: 8px; border-radius: 4px; margin-bottom: 6px; }
-    .projeto-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); }
-    .projeto-card:hover .projeto-overlay { opacity: 1; }
-    .overlay-btn { background: var(--accent); color: var(--black); padding: 0.6rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-    .projeto-info { padding: 1.5rem; }
-    .projeto-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-    .projeto-info h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .projeto-info p { font-size: 0.85rem; color: var(--gray); }
-    /* Mockup Cabana do Park */
-    .mockup-cabana { background: #1a0a00; }
-    .mockup-cabana .mockup-content { background: #2d1600; }
-    .mockup-cabana .mockup-hero-bar { background: linear-gradient(90deg, #8b4513, #d2691e); }
-    .mockup-cabana .mockup-row { width: 70%; background: #3d2000; }
-    .mockup-cabana-cols { display: flex; gap: 8px; margin-top: 12px; }
-    .mockup-cabana-col { flex: 1; height: 50px; background: #3d2000; border-radius: 4px; }
-
-    /* DIFERENCIAIS */
-    #diferenciais { background: var(--green); }
-    .diferenciais-inner { max-width: 1200px; margin: 0 auto; }
-    #diferenciais .section-label { color: var(--accent); }
-    #diferenciais .section-label::before { background: var(--accent); }
-    .diferenciais-titulo { text-align: center; }
-    .diferenciais-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,0.1); border-radius: var(--radius); overflow: hidden; margin-top: 4rem; }
-    .diferencial-item { background: var(--green); padding: 3rem; transition: background var(--transition); }
-    .diferencial-item:hover { background: #1f5535; }
-    .diferencial-icon { width: 52px; height: 52px; background: rgba(200,245,90,0.1); border: 1px solid rgba(200,245,90,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--accent); margin-bottom: 1.5rem; }
-    .diferencial-item h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.8rem; }
-    .diferencial-item p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; }
-
-    /* DEPOIMENTOS */
-    #depoimentos { background: var(--cream); color: var(--black); }
-    #depoimentos .section-label { color: var(--green); }
-    #depoimentos .section-label::before { background: var(--green); }
-    #depoimentos .section-title { color: var(--black); }
-    #depoimentos .section-title em { color: var(--green); }
-    .depoimentos-header { max-width: 1200px; margin: 0 auto 4rem; text-align: center; }
-    .depoimentos-grid { display: flex; justify-content: center; max-width: 1200px; margin: 0 auto; }
-    .depoimentos-grid .depo-card { max-width: 480px; width: 100%; }
-    .depo-card { background: white; border-radius: var(--radius); padding: 2rem; border: 1px solid rgba(0,0,0,0.08); transition: transform var(--transition), box-shadow var(--transition); }
-    .depo-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-    .depo-stars { color: #f5a623; font-size: 0.9rem; margin-bottom: 1rem; }
-    .depo-text { font-size: 0.95rem; color: #444; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
-    .depo-author { display: flex; align-items: center; gap: 1rem; }
-    .depo-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1rem; }
-    .depo-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
-    .depo-role { font-size: 0.8rem; color: var(--gray); }
-
-    /* CONTATO */
-    #contato { background: var(--black); }
-    .contato-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-    .contato-left p { color: var(--gray); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2.5rem; margin-top: 1.5rem; }
-    .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.8rem; background: #25d366; color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
-    .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(37,211,102,0.35); }
-    .whatsapp-icon { font-size: 1.2rem; }
-    .contato-info-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
-    .contato-email-link { display: flex; align-items: center; gap: 1rem; color: inherit; text-decoration: none; }
-    .contato-form { display: flex; flex-direction: column; gap: 1.2rem; }
-    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-    .form-group label { font-size: 0.85rem; font-weight: 500; color: var(--gray); }
-    .form-group input, .form-group textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 1rem 1.2rem; border-radius: 12px; font-family: var(--font-body); font-size: 0.95rem; transition: border-color var(--transition), background var(--transition); outline: none; resize: vertical; }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); background: rgba(200,245,90,0.04); }
-    .form-group textarea { min-height: 120px; }
-    .form-submit { background: var(--accent); color: var(--black); border: none; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; font-family: var(--font-body); transition: transform var(--transition), box-shadow var(--transition); display: flex; align-items: center; gap: 0.6rem; align-self: flex-start; }
-    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200,245,90,0.35); }
-    .form-success { display: none; background: rgba(76,175,125,0.1); border: 1px solid rgba(76,175,125,0.3); color: var(--green-light); padding: 1rem 1.5rem; border-radius: 12px; font-size: 0.95rem; align-items: center; gap: 0.8rem; }
-    .contato-box { background: #111; border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 2.5rem; }
-    .contato-box-title { font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .contato-box-sub { color: var(--gray); font-size: 0.9rem; margin-bottom: 2rem; }
-    .contato-info-item { display: flex; align-items: center; gap: 1rem; color: var(--gray); }
-    .info-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
-
-    /* FOOTER */
-    footer { background: #050505; border-top: 1px solid rgba(255,255,255,0.05); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); }
-    .footer-logo span { color: var(--accent); }
-    footer p { color: var(--gray); font-size: 0.85rem; }
-    .footer-links { display: flex; gap: 2rem; }
-    .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: color var(--transition); }
-    .footer-links a:hover { color: var(--accent); }
-
-    /* MOBILE MENU */
-    .mobile-menu { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.97); backdrop-filter: blur(20px); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-family: var(--font-display); font-size: 2rem; color: var(--white); text-decoration: none; transition: color var(--transition); }
-    .mobile-menu a:hover { color: var(--accent); }
-    .close-menu { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
-
-    /* SCROLL REVEAL */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
-      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-      .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .sobre-image { max-width: 400px; }
-      .contato-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      section { padding: 5rem 1.5rem; }
-      #hero { padding: 7rem 1.5rem 4rem; }
-      .hero-stats { gap: 1.5rem; }
-      .servicos-grid { grid-template-columns: 1fr; }
-      .portfolio-grid { grid-template-columns: 1fr; }
-      .diferenciais-grid { grid-template-columns: 1fr; }
-      .hero-scroll { display: none; }
-      footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
-      .servicos-header { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
@@ -275,7 +95,9 @@
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#portfolio">Portfólio</a></li>
-    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#processo">Processo</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contato" class="nav-cta">Solicitar Orçamento</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -288,7 +110,9 @@
   <a href="#sobre" class="mobile-link">Sobre</a>
   <a href="#servicos" class="mobile-link">Serviços</a>
   <a href="#portfolio" class="mobile-link">Portfólio</a>
-  <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+  <a href="#processo" class="mobile-link">Processo</a>
+  <a href="#precos" class="mobile-link">Preços</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
   <a href="#contato" class="mobile-link">Contato</a>
 </div>
 
@@ -309,9 +133,9 @@
       <a href="#portfolio" class="btn-secondary">Ver projetos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </div>
     <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Projetos entregues</div></div>
-      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Satisfação garantida</div></div>
-      <div class="stat-item"><div class="stat-num">7d</div><div class="stat-label">Prazo médio</div></div>
+      <div class="stat-item"><div class="stat-num">2h</div><div class="stat-label">Tempo de resposta</div></div>
+      <div class="stat-item"><div class="stat-num">7d</div><div class="stat-label">Prazo de entrega</div></div>
+      <div class="stat-item"><div class="stat-num">Grátis</div><div class="stat-label">Orçamento sem compromisso</div></div>
     </div>
   </div>
   <div class="hero-scroll" aria-hidden="true">Scroll</div>
@@ -401,32 +225,153 @@
 <section id="portfolio" aria-labelledby="portfolio-titulo">
   <div class="portfolio-header reveal">
     <div class="section-label">Portfólio</div>
-    <h2 id="portfolio-titulo" class="section-title">Projetos <em>recentes</em></h2>
-    <p>Uma seleção dos trabalhos que desenvolvi — cada projeto com foco nas necessidades específicas do cliente.</p>
+    <h2 id="portfolio-titulo" class="section-title">Projeto em <em>destaque</em></h2>
+    <p>Um case real entregue recentemente — desenvolvido do zero, pensado sob medida para o negócio.</p>
   </div>
-  <div class="portfolio-grid">
-    <div class="projeto-card reveal">
-      <div class="projeto-img">
-        <div class="projeto-mockup mockup-cabana" aria-hidden="true">
-          <div class="mockup-browser">
-            <div class="mockup-bar">
-              <div class="mockup-dot"></div>
-              <div class="mockup-dot"></div>
-              <div class="mockup-dot"></div>
-            </div>
-            <div class="mockup-content">
-              <div class="mockup-hero-bar"></div>
-              <div class="mockup-row"></div>
-              <div class="mockup-cabana-cols">
-                <div class="mockup-cabana-col"></div>
-                <div class="mockup-cabana-col"></div>
-              </div>
-            </div>
-          </div>
+
+  <article class="featured-case reveal">
+    <div class="featured-visual">
+      <div class="featured-browser">
+        <div class="featured-bar" aria-hidden="true">
+          <div class="featured-dot"></div>
+          <div class="featured-dot"></div>
+          <div class="featured-dot"></div>
+          <div class="featured-url">cabanadopark.com.br</div>
         </div>
-        <div class="projeto-overlay"><a href="https://www.cabanadopark.com.br/" target="_blank" rel="noopener" class="overlay-btn"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver projeto</a></div>
+        <img class="featured-screenshot-img" src="assets/images/cabana-screenshot.jpg" alt="Screenshot do site Cabana do Park" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div class="featured-screenshot" style="display:none;" aria-hidden="true">
+          <div class="featured-hero-img"></div>
+          <div class="featured-grid-mini">
+            <div></div><div></div><div></div>
+          </div>
+          <div class="featured-row-mini"></div>
+          <div class="featured-row-mini short"></div>
+        </div>
       </div>
-      <div class="projeto-info"><div class="projeto-tag">Site institucional</div><h3>Cabana do Park</h3><p>Site para negócio local com calendário de datas, galeria e contato direto via WhatsApp.</p></div>
+    </div>
+    <div class="featured-content">
+      <div class="featured-tag">Case em destaque</div>
+      <h3 class="featured-title">Cabana do Park</h3>
+      <p class="featured-desc">Site institucional completo para pousada/espaço de eventos, com foco em gerar reservas diretas via WhatsApp e mostrar disponibilidade de forma visual.</p>
+      <div class="featured-features">
+        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Calendário interativo com datas disponíveis e ocupadas</span></div>
+        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Galeria de fotos otimizada para carregamento rápido</span></div>
+        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Integração direta com WhatsApp para agilizar reservas</span></div>
+        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>SEO local configurado + Google Analytics</span></div>
+        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>100% responsivo e otimizado para mobile</span></div>
+      </div>
+      <div class="featured-stack">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>SEO</span>
+        <span>GA4</span>
+      </div>
+      <a href="https://www.cabanadopark.com.br/" target="_blank" rel="noopener" class="featured-cta">
+        Ver projeto ao vivo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+  <p class="featured-more reveal reveal-delay-1">Quer ver mais exemplos ou discutir seu projeto? <a href="#contato">Fale comigo</a></p>
+</section>
+
+<!-- PREÇOS -->
+<section id="precos" aria-labelledby="precos-titulo">
+  <div class="precos-header reveal">
+    <div class="section-label">Investimento</div>
+    <h2 id="precos-titulo" class="section-title">Planos <em>transparentes</em></h2>
+    <p>Valores claros, sem surpresas. Escolha o plano ideal para o seu momento — todos incluem domínio, hospedagem do primeiro ano e suporte inicial.</p>
+  </div>
+
+  <div class="precos-grid">
+    <div class="preco-card reveal">
+      <div class="preco-tipo">Essencial</div>
+      <h3 class="preco-nome">Landing Page</h3>
+      <p class="preco-desc">Página única focada em conversão. Ideal para divulgar serviço, captar leads ou validar uma ideia.</p>
+      <div class="preco-valor">
+        <span class="from">a partir de</span>
+        <span class="moeda">R$</span>
+        <span class="num">700</span>
+      </div>
+      <p class="preco-pagamento">Pagamento à vista ou em até 3x</p>
+      <ul class="preco-features">
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Página única responsiva</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Design personalizado</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Botão WhatsApp + formulário</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>SEO básico configurado</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Entrega em até 5 dias</li>
+      </ul>
+      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+no+plano+Landing+Page." target="_blank" rel="noopener" class="preco-cta">Quero esse plano</a>
+    </div>
+
+    <div class="preco-card popular reveal reveal-delay-1">
+      <div class="preco-badge">Mais procurado</div>
+      <div class="preco-tipo">Profissional</div>
+      <h3 class="preco-nome">Site Institucional</h3>
+      <p class="preco-desc">Site completo de até 5 páginas. Perfeito para empresas, clínicas, restaurantes e profissionais.</p>
+      <div class="preco-valor">
+        <span class="from">a partir de</span>
+        <span class="moeda">R$</span>
+        <span class="num">1.500</span>
+      </div>
+      <p class="preco-pagamento">Pagamento à vista ou em até 6x</p>
+      <ul class="preco-features">
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Até 5 páginas personalizadas</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Galeria de fotos otimizada</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Integração WhatsApp + Maps</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>SEO + Google Analytics 4</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Open Graph (compartilhamento)</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>30 dias de suporte gratuito</li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Entrega em até 10 dias</li>
+      </ul>
+      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+no+plano+Site+Institucional." target="_blank" rel="noopener" class="preco-cta">Quero esse plano</a>
+    </div>
+
+  </div>
+
+  <p class="precos-nota reveal">💡 Precisa de algo sob medida? Funcionalidades específicas como sistema de reservas, área restrita ou integrações são orçadas separadamente. <a href="#contato" style="color: var(--accent); text-decoration: none;">Fale comigo</a> para um orçamento personalizado.</p>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo" aria-labelledby="processo-titulo">
+  <div class="processo-header reveal">
+    <div class="section-label">Como trabalhamos</div>
+    <h2 id="processo-titulo" class="section-title">Processo simples<br>e <em>transparente</em></h2>
+    <p>Do primeiro contato à entrega final, você sabe exatamente o que esperar em cada etapa.</p>
+  </div>
+
+  <div class="processo-grid">
+    <div class="processo-step active reveal">
+      <div class="processo-num">01</div>
+      <div class="processo-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
+      <h3>Briefing</h3>
+      <p>Conversa inicial pelo WhatsApp para entender seu negócio, objetivos e referências. Envio um orçamento claro em até 24h.</p>
+      <span class="processo-tempo">1 a 2 dias</span>
+    </div>
+
+    <div class="processo-step reveal reveal-delay-1">
+      <div class="processo-num">02</div>
+      <div class="processo-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></div>
+      <h3>Design</h3>
+      <p>Crio o layout e estrutura do site com base no briefing. Você aprova antes de partirmos para o desenvolvimento.</p>
+      <span class="processo-tempo">2 a 3 dias</span>
+    </div>
+
+    <div class="processo-step reveal reveal-delay-2">
+      <div class="processo-num">03</div>
+      <div class="processo-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+      <h3>Desenvolvimento</h3>
+      <p>Codifico tudo do zero — rápido, responsivo e otimizado. Você acompanha prévias durante o processo.</p>
+      <span class="processo-tempo">3 a 5 dias</span>
+    </div>
+
+    <div class="processo-step reveal reveal-delay-3">
+      <div class="processo-num">04</div>
+      <div class="processo-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+      <h3>Entrega</h3>
+      <p>Publico o site, configuro domínio, SEO e Analytics. Faço treinamento rápido e ofereço suporte gratuito.</p>
+      <span class="processo-tempo">1 dia</span>
     </div>
   </div>
 </section>
@@ -459,6 +404,56 @@
       <p class="depo-text">"Ficou muito melhor do que eu esperava! Meu site ficou profissional de verdade, e já recebi elogios de clientes. O atendimento foi excelente, super atencioso em tudo."</p>
       <div class="depo-author"><div class="depo-avatar" aria-hidden="true">WS</div><div><div class="depo-name">Willian e Stefany</div><div class="depo-role">Proprietários — Cabana do Park</div></div></div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-titulo">
+  <div class="faq-header reveal">
+    <div class="section-label">Perguntas frequentes</div>
+    <h2 id="faq-titulo" class="section-title">Tirando suas <em>dúvidas</em></h2>
+  </div>
+
+  <div class="faq-list">
+    <details class="faq-item reveal">
+      <summary>Quanto tempo leva para ficar pronto?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>Depende do escopo. Landing pages ficam prontas em até 5 dias úteis. Sites institucionais em até 10 dias. Projetos personalizados são combinados conforme a complexidade. Sempre envio prévias durante o processo para você acompanhar.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Quem cuida do domínio e da hospedagem?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>Eu cuido de tudo. Registro o domínio no seu nome (você fica como dono) e configuro a hospedagem no primeiro ano por minha conta. Depois disso, você pode renovar diretamente ou continuar comigo cuidando.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Vou conseguir editar o site sozinho depois?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>Para mudanças simples como textos, fotos e horários, sim — entrego com instruções e suporte por WhatsApp nos primeiros 30 dias. Para mudanças maiores (novas seções, redesign), faço por um valor de manutenção combinado.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Tem suporte depois da entrega?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>Sim. Todos os planos incluem suporte gratuito (30 a 60 dias) para ajustes, dúvidas e correções. Após esse período, ofereço pacotes de manutenção mensal opcionais a partir de R$ 80/mês.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Meu site vai aparecer no Google?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>Sim. Configuro SEO básico em todos os projetos: meta tags, Open Graph, sitemap, indexação no Google Search Console e Google Analytics. Para ranquear nas primeiras posições, é necessário trabalho contínuo de conteúdo e SEO avançado, que posso indicar ou executar sob demanda.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Como funciona o pagamento?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>50% no início do projeto (após aprovação do escopo) e 50% na entrega final. Aceito Pix, transferência e cartão parcelado em até 6x. O orçamento é sempre fechado antes — sem custos extras durante o processo.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>E se eu não gostar do resultado?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>O processo inclui rodadas de feedback antes da entrega final, então surpresas são raras. Mesmo assim, ofereço até 2 rodadas de ajustes amplos sem custo adicional, garantindo que o resultado fique do jeito que você imaginou.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Você atende fora da minha cidade?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+      <div class="faq-answer"><p>Sim! Atendo em todo o Brasil 100% online. Toda a comunicação é feita por WhatsApp, e-mail e chamadas de vídeo quando necessário. O processo é totalmente remoto e funciona muito bem.</p></div>
+    </details>
   </div>
 </section>
 
@@ -518,6 +513,12 @@
 
 </main>
 
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+em+criar+um+site." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  <span class="whatsapp-float-tooltip">Fale comigo agora</span>
+</a>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">WEBSOLUTIONS|<span>RB</span>.</div>
@@ -530,64 +531,6 @@
   </div>
 </footer>
 
-<script>
-  // Nav scroll effect
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
-
-  // Hamburger / mobile menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMenuBtn = document.getElementById('closeMenu');
-
-  function openMenu() {
-    mobileMenu.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    hamburger.setAttribute('aria-label', 'Fechar menu');
-  }
-
-  function closeMenu() {
-    mobileMenu.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'Abrir menu');
-  }
-
-  hamburger.addEventListener('click', openMenu);
-  closeMenuBtn.addEventListener('click', closeMenu);
-  document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMenu));
-
-  // Scroll reveal
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Form submission
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nomeVal = document.getElementById('nome').value.trim();
-    const emailVal = document.getElementById('email').value.trim();
-    if (!nomeVal || !emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) return;
-    const btn = this.querySelector('.form-submit');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Enviando...';
-    const data = new FormData(this);
-    fetch('https://formspree.io/f/xdapeawe', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-      .then(res => {
-        if (res.ok) {
-          document.getElementById('formSuccess').style.display = 'flex';
-          btn.style.display = 'none';
-          this.reset();
-        } else {
-          btn.disabled = false;
-          btn.innerHTML = 'Enviar mensagem <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>';
-        }
-      })
-      .catch(() => {
-        btn.disabled = false;
-        btn.innerHTML = 'Enviar mensagem <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>';
-      });
-  });
-</script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
