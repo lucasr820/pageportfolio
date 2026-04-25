@@ -10,11 +10,7 @@ const faqs = [
   },
   {
     question: 'Quem cuida do domínio e da hospedagem?',
-    answer: 'Eu cuido de tudo. Registro o domínio no seu nome (você fica como dono) e configuro a hospedagem no primeiro ano por minha conta. Depois disso, você pode renovar diretamente ou continuar comigo cuidando.'
-  },
-  {
-    question: 'Vou conseguir editar o site sozinho depois?',
-    answer: 'Para mudanças simples como textos, fotos e horários, sim — entrego com instruções e suporte por WhatsApp nos primeiros 30 dias. Para mudanças maiores (novas seções, redesign), faço por um valor de manutenção combinado.'
+    answer: 'Oriento você sobre onde registrar o domínio (como o Registro.br) e onde hospedar o site (como a Hostinger). Todo o processo de contratação fica no seu nome, garantindo que você seja o dono de tudo. Ajudo na configuração inicial sem custo adicional.'
   },
   {
     question: 'Tem suporte depois da entrega?',
@@ -34,7 +30,7 @@ const faqs = [
   },
   {
     question: 'Você atende fora da minha cidade?',
-    answer: 'Sim! Atendo em todo o Brasil 100% online. Toda a comunicação é feita por WhatsApp, e-mail e chamadas de vídeo quando necessário. O processo é totalmente remoto e funciona muito bem.'
+    answer: 'Sim! Atendo em todo o Brasil 100% online. Toda a comunicação é feita por WhatsApp e e-mail. O processo é totalmente remoto e funciona muito bem.'
   }
 ]
 
