@@ -8,12 +8,13 @@
   <meta name="keywords" content="desenvolvedor web freelancer, criação de sites, sites para pequenos negócios, landing page, site profissional" />
 
   <!-- SEO -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/iconeweb.svg" />
+  <link rel="icon" type="image/svg+xml" href="/iconeweb.svg" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="RB | Sites Profissionais que Geram Resultados" />
   <meta property="og:description" content="Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios. Sites modernos, rápidos e que convertem visitantes em clientes." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:image" content="/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="pt_BR" />
@@ -22,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RB | Sites Profissionais que Geram Resultados" />
   <meta name="twitter:description" content="Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios." />
-  <meta name="twitter:image" content="assets/images/og-image.jpg" />
+  <meta name="twitter:image" content="/og-image.jpg" />
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -31,7 +32,7 @@
     "@type": "ProfessionalService",
     "name": "RB Web Solutions",
     "description": "Desenvolvedor web freelancer especializado em criação de sites profissionais para pequenos negócios.",
-    "image": "assets/images/og-image.jpg",
+    "image": "/og-image.jpg",
     "priceRange": "R$ 700 - R$ 2.500",
     "areaServed": {
       "@type": "Country",
@@ -81,456 +82,19 @@
   }
   </script>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Google Analytics GA4 -->
+  <!-- Add your GA4 tag here if needed -->
 </head>
 <body>
-
-<nav id="navbar" aria-label="Navegação principal">
-  <a href="#hero" class="nav-logo">WEBSOLUTIONS|<span>RB</span>.</a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#portfolio">Portfólio</a></li>
-    <li><a href="#processo">Processo</a></li>
-    <li><a href="#precos">Preços</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contato" class="nav-cta">Solicitar Orçamento</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <button class="close-menu" id="closeMenu" aria-label="Fechar menu">✕</button>
-  <a href="#sobre" class="mobile-link">Sobre</a>
-  <a href="#servicos" class="mobile-link">Serviços</a>
-  <a href="#portfolio" class="mobile-link">Portfólio</a>
-  <a href="#processo" class="mobile-link">Processo</a>
-  <a href="#precos" class="mobile-link">Preços</a>
-  <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="#contato" class="mobile-link">Contato</a>
-</div>
-
-<main>
-
-<!-- HERO -->
-<section id="hero" aria-labelledby="hero-titulo">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Disponível para novos projetos</div>
-    <h1 id="hero-titulo" class="hero-title">Crio sites profissionais<br>que <em>geram resultados</em></h1>
-    <p class="hero-sub">Transformo a identidade do seu negócio em um site moderno, rápido e que converte visitantes em clientes — com atendimento próximo e preço justo.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+em+criar+um+site." target="_blank" rel="noopener" class="btn-primary">
-        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Solicitar orçamento
-      </a>
-      <a href="#portfolio" class="btn-secondary">Ver projetos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">2h</div><div class="stat-label">Tempo de resposta</div></div>
-      <div class="stat-item"><div class="stat-num">7d</div><div class="stat-label">Prazo de entrega</div></div>
-      <div class="stat-item"><div class="stat-num">Grátis</div><div class="stat-label">Orçamento sem compromisso</div></div>
-    </div>
-  </div>
-  <div class="hero-scroll" aria-hidden="true">Scroll</div>
-</section>
-
-<!-- SOBRE -->
-<section id="sobre" aria-labelledby="sobre-titulo">
-  <div class="sobre-grid">
-    <div class="sobre-image reveal">
-      <div class="sobre-img-frame" aria-hidden="true">
-        <i class="fa-solid fa-code dev-icon" aria-hidden="true"></i>
-        <div class="code-lines">
-          <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
-          <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
-          <div class="code-line"></div><div class="code-line"></div><div class="code-line"></div>
-          <div class="code-line"></div><div class="code-line"></div>
-        </div>
-      </div>
-      <div class="sobre-badge"><span class="big">2+</span>anos criando sites</div>
-    </div>
-    <div class="sobre-text reveal reveal-delay-1">
-      <div class="section-label">Sobre mim</div>
-      <h2 id="sobre-titulo" class="section-title">Desenvolvedor web <em>focado em resultados</em></h2>
-      <p>Sou um desenvolvedor web apaixonado por transformar ideias em sites que realmente funcionam. Meu foco é criar soluções digitais personalizadas para pequenos negócios, autônomos e empreendedores locais.</p>
-      <p>Diferente de grandes agências, ofereço atendimento próximo, comunicação clara e total dedicação ao seu projeto. Cada site é desenvolvido do zero, pensando na identidade do seu negócio e nos seus objetivos.</p>
-      <p>Acredito que todo negócio merece uma presença digital de qualidade — e isso não precisa custar uma fortuna.</p>
-      <div class="sobre-pills">
-        <span class="pill">HTML & CSS</span>
-        <span class="pill">JavaScript</span>
-<span class="pill">SEO Básico</span>
-        <span class="pill">Design Responsivo</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVIÇOS -->
-<section id="servicos" aria-labelledby="servicos-titulo">
-  <div class="servicos-header reveal">
-    <div>
-      <div class="section-label">Serviços</div>
-      <h2 id="servicos-titulo" class="section-title">O que posso<br><em>fazer por você</em></h2>
-    </div>
-    <a href="#contato" class="btn-primary">Solicitar orçamento <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-  </div>
-  <div class="servicos-grid">
-    <div class="servico-card reveal">
-      <div class="servico-num" aria-hidden="true">01</div>
-      <div class="servico-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
-      <h3>Site Institucional</h3>
-      <p>Site completo para apresentar sua empresa, serviços e conquistar a confiança dos seus clientes online.</p>
-    </div>
-    <div class="servico-card reveal reveal-delay-1">
-      <div class="servico-num" aria-hidden="true">02</div>
-      <div class="servico-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
-      <h3>Landing Page</h3>
-      <p>Página focada em conversão para captar leads, vender produtos ou divulgar um serviço específico.</p>
-    </div>
-    <div class="servico-card reveal reveal-delay-2">
-      <div class="servico-num" aria-hidden="true">03</div>
-      <div class="servico-icon"><i class="fa-solid fa-store" aria-hidden="true"></i></div>
-      <h3>Sites para Negócios Locais</h3>
-      <p>Restaurantes, clínicas, salões, lojas — presença digital profissional para atrair clientes da sua região.</p>
-    </div>
-    <div class="servico-card reveal">
-      <div class="servico-num" aria-hidden="true">04</div>
-      <div class="servico-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
-      <h3>Otimização SEO</h3>
-      <p>Configuração de SEO básico para que seu site apareça no Google e seja encontrado pelos seus clientes.</p>
-    </div>
-    <div class="servico-card reveal reveal-delay-1">
-      <div class="servico-num" aria-hidden="true">05</div>
-      <div class="servico-icon"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></div>
-      <h3>Design Responsivo</h3>
-      <p>Todos os sites são desenvolvidos mobile-first — perfeitos em celulares, tablets e computadores.</p>
-    </div>
-    <div class="servico-card reveal reveal-delay-2">
-      <div class="servico-num" aria-hidden="true">06</div>
-      <div class="servico-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></div>
-      <h3>Redesign de Sites</h3>
-      <p>Modernize seu site antigo com um visual renovado, mais rápido e alinhado com as tendências atuais.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFÓLIO -->
-<section id="portfolio" aria-labelledby="portfolio-titulo">
-  <div class="portfolio-header reveal">
-    <div class="section-label">Portfólio</div>
-    <h2 id="portfolio-titulo" class="section-title">Projeto em <em>destaque</em></h2>
-    <p>Um case real entregue recentemente — desenvolvido do zero, pensado sob medida para o negócio.</p>
-  </div>
-
-  <article class="featured-case reveal">
-    <div class="featured-visual">
-      <div class="featured-browser">
-        <div class="featured-bar" aria-hidden="true">
-          <div class="featured-dot"></div>
-          <div class="featured-dot"></div>
-          <div class="featured-dot"></div>
-          <div class="featured-url">cabanadopark.com.br</div>
-        </div>
-        <img class="featured-screenshot-img" src="assets/images/cabana-screenshot.jpg" alt="Screenshot do site Cabana do Park" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <div class="featured-screenshot" style="display:none;" aria-hidden="true">
-          <div class="featured-hero-img"></div>
-          <div class="featured-grid-mini">
-            <div></div><div></div><div></div>
-          </div>
-          <div class="featured-row-mini"></div>
-          <div class="featured-row-mini short"></div>
-        </div>
-      </div>
-    </div>
-    <div class="featured-content">
-      <div class="featured-tag">Case em destaque</div>
-      <h3 class="featured-title">Cabana do Park</h3>
-      <p class="featured-desc">Site institucional completo para pousada/espaço de eventos, com foco em gerar reservas diretas via WhatsApp e mostrar disponibilidade de forma visual.</p>
-      <div class="featured-features">
-        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Calendário interativo com datas disponíveis e ocupadas</span></div>
-        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Galeria de fotos otimizada para carregamento rápido</span></div>
-        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Integração direta com WhatsApp para agilizar reservas</span></div>
-        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>SEO local configurado + Google Analytics</span></div>
-        <div class="featured-feature"><i class="fa-solid fa-check" aria-hidden="true"></i><span>100% responsivo e otimizado para mobile</span></div>
-      </div>
-      <div class="featured-stack">
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>JavaScript</span>
-        <span>SEO</span>
-        <span>GA4</span>
-      </div>
-      <a href="https://www.cabanadopark.com.br/" target="_blank" rel="noopener" class="featured-cta">
-        Ver projeto ao vivo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-      </a>
-    </div>
-  </article>
-
-  <p class="featured-more reveal reveal-delay-1">Quer ver mais exemplos ou discutir seu projeto? <a href="#contato">Fale comigo</a></p>
-</section>
-
-<!-- PREÇOS -->
-<section id="precos" aria-labelledby="precos-titulo">
-  <div class="precos-header reveal">
-    <div class="section-label">Investimento</div>
-    <h2 id="precos-titulo" class="section-title">Planos <em>transparentes</em></h2>
-    <p>Valores claros, sem surpresas. Escolha o plano ideal para o seu momento — todos incluem domínio, hospedagem do primeiro ano e suporte inicial.</p>
-  </div>
-
-  <div class="precos-grid">
-    <div class="preco-card reveal">
-      <div class="preco-tipo">Essencial</div>
-      <h3 class="preco-nome">Landing Page</h3>
-      <p class="preco-desc">Página única focada em conversão. Ideal para divulgar serviço, captar leads ou validar uma ideia.</p>
-      <div class="preco-valor">
-        <span class="from">a partir de</span>
-        <span class="moeda">R$</span>
-        <span class="num">700</span>
-      </div>
-      <p class="preco-pagamento">Pagamento à vista ou em até 3x</p>
-      <ul class="preco-features">
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Página única responsiva</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Design personalizado</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Botão WhatsApp + formulário</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>SEO básico configurado</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Entrega em até 5 dias</li>
-      </ul>
-      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+no+plano+Landing+Page." target="_blank" rel="noopener" class="preco-cta">Quero esse plano</a>
-    </div>
-
-    <div class="preco-card popular reveal reveal-delay-1">
-      <div class="preco-badge">Mais procurado</div>
-      <div class="preco-tipo">Profissional</div>
-      <h3 class="preco-nome">Site Institucional</h3>
-      <p class="preco-desc">Site completo de até 5 páginas. Perfeito para empresas, clínicas, restaurantes e profissionais.</p>
-      <div class="preco-valor">
-        <span class="from">a partir de</span>
-        <span class="moeda">R$</span>
-        <span class="num">1.500</span>
-      </div>
-      <p class="preco-pagamento">Pagamento à vista ou em até 6x</p>
-      <ul class="preco-features">
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Até 5 páginas personalizadas</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Galeria de fotos otimizada</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Integração WhatsApp + Maps</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>SEO + Google Analytics 4</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Open Graph (compartilhamento)</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>30 dias de suporte gratuito</li>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Entrega em até 10 dias</li>
-      </ul>
-      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+no+plano+Site+Institucional." target="_blank" rel="noopener" class="preco-cta">Quero esse plano</a>
-    </div>
-
-  </div>
-
-  <p class="precos-nota reveal">💡 Precisa de algo sob medida? Funcionalidades específicas como sistema de reservas, área restrita ou integrações são orçadas separadamente. <a href="#contato" style="color: var(--accent); text-decoration: none;">Fale comigo</a> para um orçamento personalizado.</p>
-</section>
-
-<!-- PROCESSO -->
-<section id="processo" aria-labelledby="processo-titulo">
-  <div class="processo-header reveal">
-    <div class="section-label">Como trabalhamos</div>
-    <h2 id="processo-titulo" class="section-title">Processo simples<br>e <em>transparente</em></h2>
-    <p>Do primeiro contato à entrega final, você sabe exatamente o que esperar em cada etapa.</p>
-  </div>
-
-  <div class="processo-grid">
-    <div class="processo-step active reveal">
-      <div class="processo-num">01</div>
-      <div class="processo-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
-      <h3>Briefing</h3>
-      <p>Conversa inicial pelo WhatsApp para entender seu negócio, objetivos e referências. Envio um orçamento claro em até 24h.</p>
-      <span class="processo-tempo">1 a 2 dias</span>
-    </div>
-
-    <div class="processo-step reveal reveal-delay-1">
-      <div class="processo-num">02</div>
-      <div class="processo-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></div>
-      <h3>Design</h3>
-      <p>Crio o layout e estrutura do site com base no briefing. Você aprova antes de partirmos para o desenvolvimento.</p>
-      <span class="processo-tempo">2 a 3 dias</span>
-    </div>
-
-    <div class="processo-step reveal reveal-delay-2">
-      <div class="processo-num">03</div>
-      <div class="processo-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-      <h3>Desenvolvimento</h3>
-      <p>Codifico tudo do zero — rápido, responsivo e otimizado. Você acompanha prévias durante o processo.</p>
-      <span class="processo-tempo">3 a 5 dias</span>
-    </div>
-
-    <div class="processo-step reveal reveal-delay-3">
-      <div class="processo-num">04</div>
-      <div class="processo-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
-      <h3>Entrega</h3>
-      <p>Publico o site, configuro domínio, SEO e Analytics. Faço treinamento rápido e ofereço suporte gratuito.</p>
-      <span class="processo-tempo">1 dia</span>
-    </div>
-  </div>
-</section>
-
-<!-- DIFERENCIAIS -->
-<section id="diferenciais" aria-labelledby="diferenciais-titulo">
-  <div class="diferenciais-inner">
-    <div class="reveal diferenciais-titulo">
-      <div class="section-label">Por que me escolher</div>
-      <h2 id="diferenciais-titulo" class="section-title">Meus <em>diferenciais</em></h2>
-    </div>
-    <div class="diferenciais-grid">
-      <div class="diferencial-item reveal"><div class="diferencial-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div><h3>Atendimento Personalizado</h3><p>Você fala diretamente comigo. Sem intermediários, sem ruídos. Entendo a fundo o seu negócio para criar algo que realmente represente você.</p></div>
-      <div class="diferencial-item reveal reveal-delay-1"><div class="diferencial-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div><h3>Sites Rápidos e Modernos</h3><p>Código limpo e otimizado. Seus clientes não esperam — sites lentos perdem vendas. Entrego performance de verdade.</p></div>
-      <div class="diferencial-item reveal reveal-delay-2"><div class="diferencial-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><h3>Foco em Conversão</h3><p>Cada elemento do site é pensado para transformar visitantes em clientes. CTAs estratégicos, design que guia e copy eficiente.</p></div>
-      <div class="diferencial-item reveal reveal-delay-3"><div class="diferencial-icon"><i class="fa-solid fa-tag" aria-hidden="true"></i></div><h3>Preço Acessível</h3><p>Site profissional não precisa custar caro. Ofereço qualidade de agência com o custo de um freelancer dedicado ao seu sucesso.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section id="depoimentos" aria-labelledby="depoimentos-titulo">
-  <div class="depoimentos-header reveal">
-    <div class="section-label">Depoimentos</div>
-    <h2 id="depoimentos-titulo" class="section-title">O que dizem os <em>clientes</em></h2>
-  </div>
-  <div class="depoimentos-grid">
-    <div class="depo-card reveal">
-      <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-      <p class="depo-text">"Ficou muito melhor do que eu esperava! Meu site ficou profissional de verdade, e já recebi elogios de clientes. O atendimento foi excelente, super atencioso em tudo."</p>
-      <div class="depo-author"><div class="depo-avatar" aria-hidden="true">WS</div><div><div class="depo-name">Willian e Stefany</div><div class="depo-role">Proprietários — Cabana do Park</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" aria-labelledby="faq-titulo">
-  <div class="faq-header reveal">
-    <div class="section-label">Perguntas frequentes</div>
-    <h2 id="faq-titulo" class="section-title">Tirando suas <em>dúvidas</em></h2>
-  </div>
-
-  <div class="faq-list">
-    <details class="faq-item reveal">
-      <summary>Quanto tempo leva para ficar pronto?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>Depende do escopo. Landing pages ficam prontas em até 5 dias úteis. Sites institucionais em até 10 dias. Projetos personalizados são combinados conforme a complexidade. Sempre envio prévias durante o processo para você acompanhar.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>Quem cuida do domínio e da hospedagem?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>Eu cuido de tudo. Registro o domínio no seu nome (você fica como dono) e configuro a hospedagem no primeiro ano por minha conta. Depois disso, você pode renovar diretamente ou continuar comigo cuidando.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>Vou conseguir editar o site sozinho depois?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>Para mudanças simples como textos, fotos e horários, sim — entrego com instruções e suporte por WhatsApp nos primeiros 30 dias. Para mudanças maiores (novas seções, redesign), faço por um valor de manutenção combinado.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>Tem suporte depois da entrega?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>Sim. Todos os planos incluem suporte gratuito (30 a 60 dias) para ajustes, dúvidas e correções. Após esse período, ofereço pacotes de manutenção mensal opcionais a partir de R$ 80/mês.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>Meu site vai aparecer no Google?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>Sim. Configuro SEO básico em todos os projetos: meta tags, Open Graph, sitemap, indexação no Google Search Console e Google Analytics. Para ranquear nas primeiras posições, é necessário trabalho contínuo de conteúdo e SEO avançado, que posso indicar ou executar sob demanda.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>Como funciona o pagamento?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>50% no início do projeto (após aprovação do escopo) e 50% na entrega final. Aceito Pix, transferência e cartão parcelado em até 6x. O orçamento é sempre fechado antes — sem custos extras durante o processo.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>E se eu não gostar do resultado?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>O processo inclui rodadas de feedback antes da entrega final, então surpresas são raras. Mesmo assim, ofereço até 2 rodadas de ajustes amplos sem custo adicional, garantindo que o resultado fique do jeito que você imaginou.</p></div>
-    </details>
-
-    <details class="faq-item reveal">
-      <summary>Você atende fora da minha cidade?<span class="faq-icon"><i class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
-      <div class="faq-answer"><p>Sim! Atendo em todo o Brasil 100% online. Toda a comunicação é feita por WhatsApp, e-mail e chamadas de vídeo quando necessário. O processo é totalmente remoto e funciona muito bem.</p></div>
-    </details>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section id="contato" aria-labelledby="contato-titulo">
-  <div class="contato-inner">
-    <div class="contato-left reveal">
-      <div class="section-label">Contato</div>
-      <h2 id="contato-titulo" class="section-title">Vamos tirar seu projeto <em>do papel?</em></h2>
-      <p>Pronto para dar o próximo passo? Me manda uma mensagem — vou responder rápido e a gente conversa sobre o que você precisa, sem compromisso.</p>
-      <a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+em+criar+um+site+para+meu+neg%C3%B3cio." target="_blank" rel="noopener" class="whatsapp-btn">
-        <i class="fa-brands fa-whatsapp whatsapp-icon" aria-hidden="true"></i> Falar pelo WhatsApp
-      </a>
-      <div class="contato-info-list">
-        <div class="contato-info-item">
-          <a href="mailto:contato.lucasrubiobarrueco@gmail.com" class="contato-email-link">
-            <div class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
-            <span>contato.lucasrubiobarrueco@gmail.com</span>
-          </a>
-        </div>
-        <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div><span>Respondo em até 2 horas</span></div>
-        <div class="contato-info-item"><div class="info-icon"><i class="fa-solid fa-map-pin" aria-hidden="true"></i></div><span>Atendo em todo o Brasil</span></div>
-      </div>
-    </div>
-    <div class="reveal reveal-delay-1">
-      <div class="contato-box">
-        <h3 class="contato-box-title">Solicite seu orçamento</h3>
-        <p class="contato-box-sub">Gratuito e sem compromisso!</p>
-        <form class="contato-form" id="contactForm" action="https://formspree.io/f/xdapeawe" method="POST" novalidate>
-          <div class="form-group">
-            <label for="nome">Seu nome</label>
-            <input type="text" id="nome" name="nome" placeholder="João Silva" required />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="joao@exemplo.com" required />
-          </div>
-          <div class="form-group">
-            <label for="telefone">Telefone / WhatsApp</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
-          </div>
-          <div class="form-group">
-            <label for="tipo">Tipo de projeto</label>
-            <input type="text" id="tipo" name="tipo" placeholder="Ex: site para minha clínica" />
-          </div>
-          <div class="form-group">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Me conte um pouco sobre seu negócio e o que você precisa..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Enviar mensagem <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
-          <div class="form-success" id="formSuccess" role="alert" aria-live="polite"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Mensagem enviada! Retorno em breve.</div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/5567981612929?text=Ol%C3%A1!+Tenho+interesse+em+criar+um+site." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
-  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-  <span class="whatsapp-float-tooltip">Fale comigo agora</span>
-</a>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">WEBSOLUTIONS|<span>RB</span>.</div>
-  <p>© <time datetime="2026">2026</time> Dev Web. Feito com muito café.</p>
-  <div class="footer-links">
-    <a href="#hero">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#contato">Contato</a>
-  </div>
-</footer>
-
-<script src="assets/js/main.js" defer></script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
